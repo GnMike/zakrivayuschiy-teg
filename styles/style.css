@@ -18,3 +18,8 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
 }
+
+/* ----------------------- floppy -------------------------- */
+.container-floppy {
+  inline-size: 21px; /* 28px - mobile */
+}
