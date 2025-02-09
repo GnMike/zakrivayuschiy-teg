@@ -19,6 +19,8 @@
   min-block-size: 100dvb;
   font-family: var(--font), sans-serif;
   font-variation-settings: var(--font-weight);
+  color: var(--accent-color);
+  background-color: var(--background-color);
 }
 
 /* ----------------------- floppy -------------------------- */

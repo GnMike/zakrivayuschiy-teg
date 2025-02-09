@@ -3,6 +3,8 @@
 :root {
   --font: 'Inter-Variable';
   --accent-font: 'PressStart2P-Regular';
-  --font-weight: 400; /* толщина основного текста карточки: light 400, dark 465 */
-  --accent-font-weight: 700; /* толщина заголовки карточки: light 700, dark 785 */
+  --font-weight: 400;
+  --accent-font-weight: 700;
+  --background-color: #ffffff;
+  --accent-color: #000000;
 }
