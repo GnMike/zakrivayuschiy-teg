@@ -17,6 +17,8 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--font), sans-serif;
+  font-variation-settings: var(--font-weight);
 }
 
 /* ----------------------- floppy -------------------------- */
