@@ -5,6 +5,7 @@
   --accent-font: 'PressStart2P-Regular';
   --font-weight: 400;
   --accent-font-weight: 700;
-  --background-color: #ffffff;
   --accent-color: #000000;
+  --background-color: #ffffff;
+  --background: #ffffff url("../images/bkg-light.png") repeat top left / 4px 4px fixed;
 }
