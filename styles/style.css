@@ -18,12 +18,220 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--font), sans-serif;
-  font-variation-settings: var(--font-weight);
+  font-variation-settings: "wght" var(--font-weight);
   color: var(--accent-color);
   background: var(--background);
 }
 
-/* ----------------------- floppy -------------------------- */
-.container-floppy {
-  inline-size: 21px; /* 28px - mobile */
+.container {
+  inline-size: clamp(320px, 95%, 696px);
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+}
+
+@media (width <= 375px) {
+   .container {
+    inline-size: 100%;
+  }
+}
+
+.header {
+  margin-block-start: 100px;
+  margin-block-end: 100px;
+  padding-block-start: var(--header-padding-block-start);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: var(--background-color);
+  border: 2px solid var(--accent-color);
+}
+
+.title {
+  font-family: var(--accent-font);
+  font-weight: var(--font-weight);
+  font-size: var(--title-font-size);
+  line-height: var(--title-font-size);
+  text-align: center;
+}
+
+@media (width <= 375px) {
+  .title {
+    --title-font-size: clamp(2.75rem, 0.9318rem + 9.0909vw, 3.0625rem);
+  }
+}
+
+span {
+  display: inline-block;
+}
+
+.title span {
+  display: block;
+  margin-block-start: 20px;
+  font-size: var(--title-span-font-size);
+  line-height: var(--title-span-font-size);
+  text-transform: uppercase;
+}
+
+.theme-menu {
+  margin-block-start: 25px;
+  margin-block-end: 25px;
+  padding-inline-start: 17px;
+}
+
+.theme-menu__list {
+  line-height: 0;
+}
+
+.theme-menu__item {
+  position: relative;
+}
+
+.theme-menu__item:not(:last-child) {
+  margin-block-end: 14px;
+}
+
+.theme-menu__button {
+  padding: 0;
+  font-family: var(--accent-font);
+  color: var(--font);
+  font-weight: var(--font-weight);
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 14px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.theme-menu__button:disabled::before {
+  position: absolute;
+  left: -20px;
+  content: '▶';
+  color: var(--accent-color);
+}
+
+.card {
+  background-color: var(--background-color);
+}
+
+.card__title {
+  inline-size: 100%;
+  padding: 5px 10px;
+  border: 2px solid var(--accent-color);
+  font-size: 18px;
+  line-height: 21.78px;
+  letter-spacing: 0%;
+}
+
+.card__image-container {
+  inline-size: 100%;
+  aspect-ratio: 1 / 1;
+  border-inline-start: 2px solid var(--accent-color);
+  border-inline-end: 2px solid var(--accent-color);
+}
+
+.card__image {
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card__content {
+  padding: 25px;
+  border: 2px solid var(--accent-color);
+}
+
+.card__paragraph {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.card .card__paragraph:not(:last-child) {
+  margin-block-end: 27px;
+}
+
+.card .card__paragraph:last-child {
+  margin-block-end: 25px;
+}
+
+.card__icon-button-container {
+  display: flex;
+  flex-direction: row;
+  justify-self: flex-end;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.card__icon-button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.like-icon {
+  inline-size: 39px;
+  block-size: 36px;
+}
+
+.card__like-button {
+  inline-size: 130px;
+  block-size: 38px;
+  padding: 0;
+  background-color: transparent;
+  border: 2px solid var(--accent-color);
+  cursor: pointer;
+}
+
+.is-liked { /* для обозначения состояния лайкнутой иконки в виде сердца */
+
+}
+
+.button__text {
+  font-family: var(--accent-font);
+  font-weight: var(--font-weight);
+  font-size: 14px;
+  line-height: 12.6px;
+}
+
+.footer {
+  padding-block-start: 50px;
+  padding-block-end: 100px;
+  background-color: var(--background-color);
+}
+
+.card__icon-save-button {
+  inline-size: clamp(306px, 92%, 335px);
+  block-size: 55px;
+  display: flex;
+  flex-direction: row;
+  justify-self: center;
+  justify-content: center;
+  align-items: center;
+  column-gap: 8px;
+  padding: 0;
+  border: 2px solid var(--accent-color);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.floppy {
+  inline-size: var(--floppy-size);
+}
+
+@media (width <= 375px) {
+  .card__icon-save-button {
+    inline-size: 306px;
+    block-size: 80px;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 8px;
+ }
+
+  .floppy {
+    --floppy-size: 28px;
+  }
 }
