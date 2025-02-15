@@ -213,22 +213,64 @@ span {
 .card__icon-button {
   padding: 0;
   background-color: transparent;
-  border: none;
+  border: 2px solid;
+  border-color: transparent;
   cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border-color: var(--accent-color);
 }
 
 .like-icon {
-  inline-size: 39px;
-  block-size: 36px;
+  inline-size: 33px;
+  block-size: 30px;
 }
 
 .card__like-button {
   inline-size: 130px;
   block-size: 38px;
+}
+
+.card__like-button,
+.card__icon-save-button {
   padding: 0;
-  background-color: transparent;
   border: 2px solid var(--accent-color);
+  background-color: var(--background-color);
   cursor: pointer;
+  position: relative;
+  transition: box-shadow 0.3s ease, color 1s ease;
+}
+
+.card__like-button:hover {
+  color: var(--background-color);
+}
+
+.card__like-button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  inline-size: 100%;
+  block-size: 100%;
+  background-color: var(--accent-color);
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.card__like-button:hover::after {
+  transform: scaleX(1);
+}
+
+.card__like-button:focus {
+  outline: none;
+  box-shadow: 2px 2px 0 0 var(--accent-color);
 }
 
 .is-liked { /* для обозначения состояния лайкнутой иконки в виде сердца */
@@ -240,12 +282,13 @@ span {
   font-weight: var(--font-weight);
   font-size: 14px;
   line-height: 12.6px;
+  position: relative;
+  z-index: 1;
 }
 
 .footer {
-  padding-block-start: 50px;
-  padding-block-end: 100px;
-  background-color: var(--background-color);
+  margin-block-start: 50px;
+  margin-block-end: 100px;
 }
 
 .card__icon-save-button {
@@ -257,13 +300,37 @@ span {
   justify-content: center;
   align-items: center;
   column-gap: 8px;
-  padding: 0;
-  border: 2px solid var(--accent-color);
-  background-color: transparent;
-  cursor: pointer;
+}
+
+.card__icon-save-button:hover {
+  color: var(--background-color);
+}
+
+.card__icon-save-button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  inline-size: 100%;
+  block-size: 100%;
+  background-color: var(--accent-color);
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.card__icon-save-button:hover::after {
+  transform: scaleX(1);
+}
+
+.card__icon-save-button:focus {
+  outline: none;
+  box-shadow: 2px 2px 0 0 var(--accent-color);
 }
 
 .floppy {
+  position: relative;
+  z-index: 1;
   inline-size: var(--floppy-size);
 }
 
