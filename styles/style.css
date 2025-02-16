@@ -207,7 +207,7 @@ span {
   flex-direction: row;
   justify-self: flex-end;
   align-items: center;
-  column-gap: 10px;
+  column-gap: 8px;
 }
 
 .card__icon-button {
@@ -230,6 +230,10 @@ span {
 .like-icon {
   inline-size: 33px;
   block-size: 30px;
+}
+
+.sparks {
+  opacity: 0;
 }
 
 .card__like-button {
