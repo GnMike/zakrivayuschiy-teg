@@ -8,12 +8,13 @@
   --accent-color: #000000;
   --background-color: #ffffff;
   --background: #ffffff url("../images/bkg-light.png") repeat top left / 4px 4px fixed;
+  --heart-core: transparent;
+  --heart-main-body: transparent;
   --heart-contour: #000000;
   --heart-sparks: #FF0000;
-
+  --heart-fill: #FF0000;
   --title-font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   --title-span-font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   --header-padding-block-start: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem);
-  
   --floppy-size: 21px;
 }

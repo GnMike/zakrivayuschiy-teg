@@ -13,6 +13,7 @@
     --background-color: #ffffff;
     --background: #ffffff url("../images/bkg-light.png") repeat top left / 4px 4px fixed;
     --heart-contour: #000000;
+    --heart-sparks: #FF0000;
   }
 }
 
@@ -23,6 +24,7 @@
   --background-color: #ffffff;
   --background: #ffffff url("../images/bkg-light.png") repeat top left / 4px 4px fixed;
   --heart-contour: #000000;
+  --heart-sparks: #FF0000;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -33,6 +35,7 @@
     --background-color: #000000;
     --background: #000000 url("../images/bkg-dark.png") repeat top left / 4px 4px fixed;
     --heart-contour: #00CC14;
+    --heart-sparks: #FF0000;
   }
 }
 
@@ -43,4 +46,5 @@
   --background-color: #000000;
   --background: #000000 url("../images/bkg-dark.png") repeat top left / 4px 4px fixed;
   --heart-contour: #00CC14;
+  --heart-sparks: #FF0000;
 }
