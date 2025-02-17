@@ -12,3 +12,177 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+
+/* --------------------------------------------------------- */
+
+.theme-menu__button:disabled::before {
+  animation: cursor-theme-menu 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes cursor-theme-menu {
+  0% {
+    left: -20px;
+  }
+
+  100% {
+    left: -16px;
+  }
+}
+
+/* --------------------------------------------------------- */
+
+.theme-menu__button {
+  transition: opacity 0.3s ease;
+}
+
+.theme-menu__button:disabled {
+  opacity: 0.6;
+}
+
+.theme-menu__button::after {
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.theme-menu__button:hover::after {
+  transform: scaleX(1);
+}
+
+.theme-menu__button:focus-visible::after {
+  transform: scaleX(1);
+}
+
+/* --------------------------------------------------------- */
+
+.card__icon-button {
+  transition: border-color 0.3s ease;
+}
+
+.card__icon-button:focus-visible {
+  border-color: var(--accent-color);
+}
+
+/* --------------------------------------------------------- */
+
+.core {
+  transition: fill 0.3s 0.03s linear;
+}
+
+.like-icon:hover .core {
+  fill: var(--accent-color);
+  transition: fill 0.3s linear;
+}
+
+.like-icon:active .core {
+  fill: var(--heart-fill);
+  transition: fill 0.3s linear;
+}
+
+.like-icon.is-liked .core {
+  fill: var(--heart-fill);
+  transition: fill 0.3s linear;
+}
+
+/* --------------------------------------------------------- */
+
+.main-body {
+  transition: fill 0.3s linear;
+}
+
+.like-icon:hover .main-body {
+  fill: var(--accent-color);
+  transition: fill 0.3s 0.05s linear;
+}
+
+.like-icon:active .main-body {
+  fill: var(--heart-fill);
+  transition: fill 0.3s 0.05s linear;
+}
+
+.like-icon.is-liked .main-body {
+  fill: var(--heart-fill);
+  transition: fill 0.3s 0.05s linear;
+}
+
+/* --------------------------------------------------------- */
+
+.like-icon.is-liked .contour {
+  fill: var(--heart-fill);
+  transition: fill 0.3s 0.06s linear;
+}
+
+/* --------------------------------------------------------- */
+
+.like-icon.is-liked .heart {
+  transform-origin: center center;
+  animation: heart-scale 0.3s 0.1s ease-in 2 alternate;
+}
+
+@keyframes heart-scale {
+  0% {
+    scale: 1;
+  }
+
+  100% {
+    scale: 1.5;
+  }
+}
+
+/* --------------------------------------------------------- */
+
+.like-icon.is-liked .sparks {
+  transform-origin: center center;
+  animation: heart-sparks 0.3s 0.3s ease-in 2 alternate;
+}
+
+@keyframes heart-sparks {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* --------------------------------------------------------- */
+
+.card__like-button,
+.card__icon-save-button {
+  transition: box-shadow 0.3s ease, color 1s ease;
+}
+
+/* --------------------------------------------------------- */
+
+.card__like-button::after {
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+  
+.card__like-button:hover::after {
+  transform: scaleX(1);
+}
+  
+.card__like-button:focus {
+  box-shadow: 2px 2px 0 0 var(--accent-color);
+}
+
+/* --------------------------------------------------------- */
+
+.card__icon-save-button::after {
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.card__icon-save-button:hover::after {
+  transform: scaleX(1);
+}
+
+.card__icon-save-button:focus {
+  box-shadow: 2px 2px 0 0 var(--accent-color);
+}
+
+/* --------------------------------------------------------- */
