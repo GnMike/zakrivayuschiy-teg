@@ -253,11 +253,6 @@ span {
   z-index: 1;
 }
 
-.footer {
-  margin-block-start: 50px;
-  margin-block-end: 100px;
-}
-
 .card__icon-save-button {
   inline-size: clamp(306px, 92%, 335px);
   block-size: 55px;
@@ -267,6 +262,8 @@ span {
   justify-content: center;
   align-items: center;
   column-gap: 8px;
+  margin-block-start: 50px;
+  margin-block-end: 100px;
 }
 
 .floppy {
