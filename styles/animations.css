@@ -148,41 +148,20 @@
 
 /* --------------------------------------------------------- */
 
-.card__like-button,
-.card__icon-save-button {
+.card__button {
   transition: box-shadow 0.3s ease, color 1s ease;
 }
 
-/* --------------------------------------------------------- */
-
-.card__like-button::after {
+.card__button::after {
   transform-origin: left;
   transform: scaleX(0);
   transition: transform 0.3s ease;
 }
   
-.card__like-button:hover::after {
+.card__button:hover::after {
   transform: scaleX(1);
 }
   
-.card__like-button:focus {
+.card__button:focus {
   box-shadow: 2px 2px 0 0 var(--accent-color);
 }
-
-/* --------------------------------------------------------- */
-
-.card__icon-save-button::after {
-  transform-origin: left;
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
-}
-
-.card__icon-save-button:hover::after {
-  transform: scaleX(1);
-}
-
-.card__icon-save-button:focus {
-  box-shadow: 2px 2px 0 0 var(--accent-color);
-}
-
-/* --------------------------------------------------------- */
