@@ -165,7 +165,7 @@ span {
 }
 
 .card__content {
-  padding: 25px;
+  padding: 25px 25px 18px;
   border: 2px solid var(--accent-color);
 }
 
@@ -186,14 +186,15 @@ span {
   display: flex;
   flex-direction: row;
   justify-self: flex-end;
-  align-items: flex-start;
-  column-gap: 4px;
+  align-items:flex-start;
+  column-gap: 2px;
 }
 
 .card__icon-button {
   padding: 0;
   background-color: transparent;
   border: 2px solid;
+  block-size: 38px;
   border-color: transparent;
   cursor: pointer;
 }
@@ -203,8 +204,8 @@ span {
 }
 
 .like-icon {
-  inline-size: 33px;
-  block-size: 30px;
+  inline-size: 39px;
+  block-size: 36px;
 }
 
 .sparks {
