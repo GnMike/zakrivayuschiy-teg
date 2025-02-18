@@ -11,7 +11,10 @@
     --accent-font-weight: 700;
     --accent-color: #000000;
     --background-color: #ffffff;
-    --background: #ffffff url("../images/bkg-light.png") repeat top left / 4px 4px fixed;
+    --background:
+        repeating-linear-gradient(to right, #d3d3d3 0, #d3d3d3 2px, transparent 2px, transparent 4px),
+        repeating-linear-gradient(to bottom, #d3d3d3 0, #d3d3d3 2px, transparent 2px, transparent 4px),
+        linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a) left top / cover;
     --heart-contour: #000000;
     --heart-sparks: #FF0000;
   }
@@ -22,7 +25,10 @@
   --accent-font-weight: 700;
   --accent-color: #000000;
   --background-color: #ffffff;
-  --background: #ffffff url("../images/bkg-light.png") repeat top left / 4px 4px fixed;
+  --background:
+      repeating-linear-gradient(to right, #d3d3d3 0, #d3d3d3 2px, transparent 2px, transparent 4px),
+      repeating-linear-gradient(to bottom, #d3d3d3 0, #d3d3d3 2px, transparent 2px, transparent 4px),
+      linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a) left top / cover;
   --heart-contour: #000000;
   --heart-sparks: #FF0000;
 }
@@ -33,7 +39,10 @@
     --accent-font-weight: 785;
     --accent-color: #00CC14;
     --background-color: #000000;
-    --background: #000000 url("../images/bkg-dark.png") repeat top left / 4px 4px fixed;
+    --background:
+       repeating-linear-gradient(to right, #000000 0, #000000 2px, transparent 2px, transparent 4px),
+       repeating-linear-gradient(to bottom, #000000 0, #000000 2px, transparent 2px, transparent 4px),
+       linear-gradient(to bottom, #007f0c, #004306);
     --heart-contour: #00CC14;
     --heart-sparks: #FF0000;
   }
@@ -44,7 +53,10 @@
   --accent-font-weight: 785;
   --accent-color: #00CC14;
   --background-color: #000000;
-  --background: #000000 url("../images/bkg-dark.png") repeat top left / 4px 4px fixed;
+  --background:
+      repeating-linear-gradient(to right, #000000 0, #000000 2px, transparent 2px, transparent 4px),
+      repeating-linear-gradient(to bottom, #000000 0, #000000 2px, transparent 2px, transparent 4px),
+      linear-gradient(to bottom, #007f0c, #004306);
   --heart-contour: #00CC14;
   --heart-sparks: #FF0000;
 }

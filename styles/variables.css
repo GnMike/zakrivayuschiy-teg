@@ -7,7 +7,10 @@
   --accent-font-weight: 700;
   --accent-color: #000000;
   --background-color: #ffffff;
-  --background: #ffffff url("../images/bkg-light.png") repeat top left / 4px 4px fixed;
+  --background:
+      repeating-linear-gradient(to right, #d3d3d3 0, #d3d3d3 2px, transparent 2px, transparent 4px),
+      repeating-linear-gradient(to bottom, #d3d3d3 0, #d3d3d3 2px, transparent 2px, transparent 4px),
+      linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a) left top / cover;
   --heart-core: transparent;
   --heart-main-body: transparent;
   --heart-contour: #000000;
