@@ -17,6 +17,8 @@
         linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a) left top / cover;
     --heart-contour: #000000;
     --heart-sparks: #FF0000;
+    --heart-fill: #FF0000;
+    --button-text-mix-color: #ffffff;
   }
 }
 
@@ -31,6 +33,8 @@
       linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a) left top / cover;
   --heart-contour: #000000;
   --heart-sparks: #FF0000;
+  --heart-fill: #FF0000;
+  --button-text-mix-color: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -45,6 +49,8 @@
        linear-gradient(to bottom, #007f0c, #004306);
     --heart-contour: #00CC14;
     --heart-sparks: #FF0000;
+    --heart-fill: #FF0000;
+    --button-text-mix-color: #00CC14;
   }
 }
 
@@ -59,4 +65,6 @@
       linear-gradient(to bottom, #007f0c, #004306);
   --heart-contour: #00CC14;
   --heart-sparks: #FF0000;
+  --heart-fill: #FF0000;
+  --button-text-mix-color: #00CC14;
 }

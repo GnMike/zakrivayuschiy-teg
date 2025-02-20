@@ -249,10 +249,7 @@ article:not(:last-of-type) {
   background-color: var(--background-color);
   cursor: pointer;
   position: relative;
-}
-
-.card__button:hover {
-  color: var(--background-color);
+  color: var(--button-text-mix-color);
 }
 
 .card__button::after {
@@ -276,6 +273,7 @@ article:not(:last-of-type) {
   line-height: 12.6px;
   position: relative;
   z-index: 1;
+  mix-blend-mode: difference;
 }
 
 .card__icon-save-button {
@@ -294,6 +292,7 @@ article:not(:last-of-type) {
 .floppy {
   position: relative;
   z-index: 1;
+  mix-blend-mode: difference;
   inline-size: var(--floppy-size);
 }
 
