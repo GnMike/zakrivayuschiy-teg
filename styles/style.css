@@ -135,6 +135,10 @@ span {
   outline: transparent;
 }
 
+article:not(:last-of-type) {
+  margin-block-end: 50px;
+}
+
 .card {
   background-color: var(--background-color);
   border: 2px solid var(--accent-color);
@@ -153,9 +157,30 @@ span {
 .card__image-container {
   display: flex;
   inline-size: 100%;
+  aspect-ratio: 1 / 1;
   border-block-end: 2px solid var(--accent-color);
-  margin: 0;
-  padding: 0;
+  position: relative;
+}
+
+.card__watermark {
+  position: absolute;
+  top: 25px;
+  right: clamp(0.8125rem, 0.5484rem + 1.1268vw, 1.5625rem);
+  font-family: var(--accent-font), fantasy;
+  font-weight: 400;
+  font-size: 14px;
+  opacity: 0.5;
+  mix-blend-mode: hard-light;
+  text-shadow: -1px 0 #ffffff, 0 1px #ffffff, 1px 0 #ffffff, 0 -1px #ffffff;
+  color: var(--accent-color);
+}
+
+@supports((text-stroke: 1px #ffffff) or (-webkit-text-stroke: 1px #ffffff)) {
+  .card__watermark {
+      -webkit-text-stroke: 1px var(--background-color);
+      text-stroke: 1px var(--background-color);
+      text-shadow: none;
+  }
 }
 
 .card__image {
