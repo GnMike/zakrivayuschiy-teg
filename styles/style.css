@@ -317,7 +317,7 @@ article:not(:last-of-type) {
   --floppy-size: 39px;
 }
 
-dialog {
+dialog[open] {
   max-width: 353px;
   padding: 28px;
   color: var(--accent-color);
