@@ -18,9 +18,12 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--font), sans-serif;
-  font-variation-settings: "wght" var(--font-weight);
-  color: var(--accent-color);
-  background: var(--background);
+  font-variation-settings: "wght" var(--font-weight, 400);
+  color: var(--accent-color, #000000);
+  background: var(--background,
+    repeating-linear-gradient(to right, #d3d3d3 0, #d3d3d3 2px, transparent 2px, transparent 4px),
+    repeating-linear-gradient(to bottom, #d3d3d3 0, #d3d3d3 2px, transparent 2px, transparent 4px),
+    linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a) left top / cover fixed);
 }
 
 .container {
@@ -38,20 +41,20 @@
 .header {
   margin-block-start: 100px;
   margin-block-end: 100px;
-  padding-block-start: var(--header-padding-block-start);
+  padding-block-start: var(--header-padding-block-start, clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem));
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  background-color: var(--background-color);
-  border: 2px solid var(--accent-color);
+  background-color: var(--background-color, #ffffff);
+  border: 2px solid var(--accent-color, #000000);
 }
 
 .title {
   font-family: var(--accent-font), fantasy;
-  font-weight: var(--font-weight);
-  font-size: var(--title-font-size);
-  line-height: var(--title-font-size);
+  font-weight: var(--font-weight, 400);
+  font-size: var(--title-font-size, clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem));
+  line-height: var(--title-font-size, clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem));
   text-align: center;
 }
 
@@ -68,8 +71,8 @@ span {
 .title span {
   display: block;
   margin-block-start: 20px;
-  font-size: var(--title-span-font-size);
-  line-height: var(--title-span-font-size);
+  font-size: var(--title-span-font-size, clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem));
+  line-height: var(--title-span-font-size, clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem));
   text-transform: uppercase;
 }
 
@@ -95,7 +98,7 @@ span {
   padding: 0;
   font-family: var(--accent-font), fantasy;
   color: var(--font);
-  font-weight: var(--font-weight);
+  font-weight: var(--font-weight, 400);
   text-transform: uppercase;
   font-size: 14px;
   line-height: 14px;
@@ -112,7 +115,7 @@ span {
   position: absolute;
   left: -20px;
   content: '▶';
-  color: var(--accent-color);
+  color: var(--accent-color, #000000);
 }
 
 .theme-menu__button:hover {
@@ -123,7 +126,7 @@ span {
   content: '';
   display: block;
   height: 2px;
-  background-color: var(--accent-color);
+  background-color: var(--accent-color, #000000);
 }
 
 .theme-menu__button:focus {
@@ -140,16 +143,16 @@ article:not(:last-of-type) {
 }
 
 .card {
-  background-color: var(--background-color);
-  border: 2px solid var(--accent-color);
+  background-color: var(--background-color, #ffffff);
+  border: 2px solid var(--accent-color, #000000);
 }
 
 .card__title {
   inline-size: 100%;
   padding: 5px 10px 4px;
-  border-block-end: 2px solid var(--accent-color);
+  border-block-end: 2px solid var(--accent-color, #000000);
   font-size: 18px;
-  font-variation-settings: "wght" var(--accent-font-weight);
+  font-variation-settings: "wght" var(--accent-font-weight, 700);
   line-height: 21.78px;
   letter-spacing: 0;
 }
@@ -158,7 +161,7 @@ article:not(:last-of-type) {
   display: flex;
   inline-size: 100%;
   aspect-ratio: 1 / 1;
-  border-block-end: 2px solid var(--accent-color);
+  border-block-end: 2px solid var(--accent-color, #000000);
   position: relative;
 }
 
@@ -171,14 +174,18 @@ article:not(:last-of-type) {
   font-size: 14px;
   opacity: 0.5;
   mix-blend-mode: hard-light;
-  text-shadow: -1px 0 var(--background-color), 0 1px var(--background-color), 1px 0 var(--background-color), 0 -1px var(--background-color);
-  color: var(--accent-color);
+  text-shadow:
+    -1px 0 var(--background-color, #ffffff),
+    0 1px var(--background-color, #ffffff),
+    1px 0 var(--background-color, #ffffff),
+    0 -1px var(--background-color, #ffffff);
+  color: var(--accent-color, #000000);
 }
 
 @supports((text-stroke: 1px #ffffff) or (-webkit-text-stroke: 1px #ffffff)) {
   .card__watermark {
-      -webkit-text-stroke: 1px var(--background-color);
-      text-stroke: 1px var(--background-color);
+      -webkit-text-stroke: 1px var(--background-color, #ffffff);
+      text-stroke: 1px var(--background-color, #ffffff);
       text-shadow: none;
   }
 }
@@ -273,11 +280,11 @@ article:not(:last-of-type) {
 .card__button {
   padding: 0;
   line-height: 0;
-  border: 2px solid var(--accent-color);
-  background-color: var(--background-color);
+  border: 2px solid var(--accent-color, #000000);
+  background-color: var(--background-color, #ffffff);
   cursor: pointer;
   position: relative;
-  color: var(--button-text-mix-color);
+  color: var(--button-text-mix-color, #ffffff);
 }
 
 .card__button::after {
@@ -287,7 +294,7 @@ article:not(:last-of-type) {
   left: 0;
   inline-size: 100%;
   block-size: 100%;
-  background-color: var(--accent-color);
+  background-color: var(--accent-color, #000000);
 }
 
 .card__button:focus {
@@ -296,7 +303,7 @@ article:not(:last-of-type) {
 
 .button__text {
   font-family: var(--accent-font), fantasy;
-  font-weight: var(--font-weight);
+  font-weight: var(--font-weight, 400);
   font-size: 14px;
   line-height: 12.6px;
   position: relative;
@@ -320,7 +327,7 @@ article:not(:last-of-type) {
 .floppy {
   position: relative;
   z-index: 1;
-  inline-size: var(--floppy-size);
+  inline-size: var(--floppy-size, 21px);
 }
 
 .mix-mode {
@@ -348,9 +355,9 @@ article:not(:last-of-type) {
 dialog[open] {
   max-width: 353px;
   padding: 28px;
-  color: var(--accent-color);
-  background-color: var(--background-color);
-  border: 2px solid var(--accent-color);
+  color: var(--accent-color, #000000);
+  background-color: var(--background-color, #ffffff);
+  border: 2px solid var(--accent-color, #000000);
   text-transform: uppercase;
 }
 
@@ -375,7 +382,7 @@ dialog::backdrop {
 
 .popup-window-description {
   font-family: var(--accent-font), fantasy;
-  font-weight: var(--font-weight);
+  font-weight: var(--font-weight, 400);
   font-size: 14px;
   line-height: 21px;
 }
