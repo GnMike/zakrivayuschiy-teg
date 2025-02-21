@@ -356,3 +356,31 @@ dialog::backdrop {
   inline-size: 100%;
   block-size: 38px;
 }  
+
+.grayscale {
+  filter: grayscale(0.8);
+}
+
+.user-filter {
+  filter: contrast(2) brightness(200%);
+}
+
+.saturate {
+  filter: saturate(75%);
+}
+
+.invert {
+  filter: invert(0.7);
+}
+
+.sepia {
+  filter: sepia(80%);
+}
+
+.blur {
+  filter: blur(0.5rem);
+}
+
+.hue-rotate {
+  filter: hue-rotate(-90deg);
+}
