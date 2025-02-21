@@ -327,7 +327,7 @@ dialog[open] {
 }
 
 @media (width <= 375px) {
-  dialog {
+  dialog[open] {
     max-width: clamp(300px, 95%, 341px);
     padding: 30px 40px;
   }
