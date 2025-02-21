@@ -363,13 +363,40 @@
       </article>
 
       <div class="container">
-        <button type="button" class="card__icon-save-button card__button">
-          <svg class="floppy" viewBox="0 0 21 21" fill="currentColor">
+        <button
+          type="button"
+          onclick="window['dialog-id'].showModal();"
+          aria-controls="dialog-id"
+          class="card__icon-save-button card__button"
+        >
+          <svg class="floppy mix-mode" viewBox="0 0 21 21" fill="currentColor">
             <use href="./svg/like.svg#floppy" />
           </svg>
           <span class="button__text">Сохранить на память</span>
         </button>
       </div>
+
+      <dialog id="dialog-id">
+        <form>
+          <div class="popup-window">
+            <div class="popup-window-floppy-container">
+              <svg class="floppy popup-window-floppy" viewBox="0 0 21 21" fill="currentColor">
+                <use href="./svg/like.svg#floppy" />
+              </svg>
+            </div>
+            <div class="popup-window-description-container">
+              <p class="popup-window-description">Вставьте дискету, чтобы продолжить</p>
+            </div>
+          </div>
+          <button
+            class="popup-window-button card__button"
+            type="submit"
+          >
+            <span class="button__text">Ok</span>
+          </button>
+        </form>
+      </dialog>
+
     </main>
     <script src="./scripts/set-theme.js"></script>
     <script src="./scripts/like.js"></script>

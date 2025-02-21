@@ -292,8 +292,11 @@ article:not(:last-of-type) {
 .floppy {
   position: relative;
   z-index: 1;
-  mix-blend-mode: difference;
   inline-size: var(--floppy-size);
+}
+
+.mix-mode {
+  mix-blend-mode: difference;
 }
 
 @media (width <= 375px) {
@@ -303,9 +306,53 @@ article:not(:last-of-type) {
     flex-direction: column;
     justify-content: center;
     row-gap: 9px;
- }
+}
 
   .floppy {
     --floppy-size: 28px;
   }
 }
+
+.popup-window-floppy {
+  --floppy-size: 39px;
+}
+
+dialog {
+  max-width: 353px;
+  padding: 28px;
+  color: var(--accent-color);
+  background-color: var(--background-color);
+  border: 2px solid var(--accent-color);
+}
+
+@media (width <= 375px) {
+  dialog {
+    max-width: clamp(300px, 95%, 341px);
+    padding: 30px 40px;
+  }
+}
+
+dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.75);
+}
+
+.popup-window {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.popup-window-description {
+  font-family: var(--accent-font), fantasy;
+  font-weight: var(--font-weight);
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.popup-window-button {
+  margin-block-start: 30px;
+  inline-size: 100%;
+  block-size: 38px;
+}  
