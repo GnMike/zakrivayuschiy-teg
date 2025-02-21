@@ -190,6 +190,34 @@ article:not(:last-of-type) {
   object-position: center;
 }
 
+.grayscale {
+  filter: grayscale(0.8);
+}
+
+.user-filter {
+  filter: contrast(2) brightness(200%);
+}
+
+.saturate {
+  filter: saturate(75%);
+}
+
+.invert {
+  filter: invert(0.7);
+}
+
+.sepia {
+  filter: sepia(80%);
+}
+
+.blur {
+  filter: blur(0.5rem);
+}
+
+.hue-rotate {
+  filter: hue-rotate(-90deg);
+}
+
 .card__content {
   padding: 25px 25px;
 }
@@ -359,30 +387,3 @@ dialog::backdrop {
   text-transform: inherit;
 }
 
-.grayscale {
-  filter: grayscale(0.8);
-}
-
-.user-filter {
-  filter: contrast(2) brightness(200%);
-}
-
-.saturate {
-  filter: saturate(75%);
-}
-
-.invert {
-  filter: invert(0.7);
-}
-
-.sepia {
-  filter: sepia(80%);
-}
-
-.blur {
-  filter: blur(0.5rem);
-}
-
-.hue-rotate {
-  filter: hue-rotate(-90deg);
-}
