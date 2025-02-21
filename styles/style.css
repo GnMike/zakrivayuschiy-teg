@@ -171,7 +171,7 @@ article:not(:last-of-type) {
   font-size: 14px;
   opacity: 0.5;
   mix-blend-mode: hard-light;
-  text-shadow: -1px 0 #ffffff, 0 1px #ffffff, 1px 0 #ffffff, 0 -1px #ffffff;
+  text-shadow: -1px 0 var(--background-color), 0 1px var(--background-color), 1px 0 var(--background-color), 0 -1px var(--background-color);
   color: var(--accent-color);
 }
 
