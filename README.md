@@ -1,3 +1,3 @@
-# Проект «Закрывающий тег. SVG, анимации, шрифты»
+# Проект «Закрывающий тег. Финал»
 
 https://github.com/GnMike/zakrivayuschiy-teg

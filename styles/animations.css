@@ -145,7 +145,7 @@
 /* --------------------------------------------------------- */
 
 .card__button {
-  transition: box-shadow 0.3s ease, color 1s ease;
+  transition: box-shadow 0.3s ease;
 }
 
 .card__button::after {
@@ -160,4 +160,20 @@
   
 .card__button:focus {
   box-shadow: 2px 2px 0 0 var(--accent-color);
+}
+
+/* --------------------------------------------------------- */
+
+.hue-rotate {
+  animation: filter 5s linear infinite;
+}
+
+@keyframes filter {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+
+  100% {
+    filter: hue-rotate(360deg);
+  }
 }
